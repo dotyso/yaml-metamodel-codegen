@@ -1,0 +1,19 @@
+!com.thsoft.metamodel.ui.Page
+    id: SchedulingPriority
+    title: 排程优先级
+    controls:
+        - !com.thsoft.metamodel.ui.controls.Panel
+          id: panel
+          groupText: 设置
+          dataContext: SchedulingPriority
+          controls:
+            - !com.thsoft.metamodel.ui.controls.Button
+              name: submit
+              text: 提交
+            - !com.thsoft.metamodel.ui.controls.TextBox
+              name: priorityName
+              dataBinding: { path: name }
+            - !com.thsoft.metamodel.ui.controls.TextBox 
+              { name: priorityName, text: 名称 }
+            - !com.thsoft.metamodel.ui.controls.TextBox  { name: priorityName, text: "zzz  " }
+    

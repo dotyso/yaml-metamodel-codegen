@@ -1,0 +1,6 @@
+!com.thsoft.metamodel.application.Module
+    title: 排程优先级
+    name: schedulingPriority
+    packageName: base.schedulingpriority
+    
+

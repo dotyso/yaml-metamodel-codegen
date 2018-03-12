@@ -1,0 +1,8 @@
+!com.thsoft.metamodel.application.Application
+    title: 制造执行系统
+    name: mes
+    companyCodeName: thsoft
+    packageName: com.thsoft.mes
+    javaProjectOutputPath: D:\gentest\
+    webProjectName: thsoft-website
+    webappOutputPath: D:\Work\Workspace\thsoft-mes13\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\

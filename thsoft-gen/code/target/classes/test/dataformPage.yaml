@@ -1,0 +1,13 @@
+!Page
+    name: SchedulingPriority
+    title: 排程优先级
+    controls:
+        - !DataForm
+          name: dataForm
+          dataContext: SchedulingPriority
+          items:
+           -  {name: priorityCode, type: TextBox, text: 内容 }
+           -  {name: priorityName, type: TextBox, dataBinding: {path: priorityName} }
+
+                      
+

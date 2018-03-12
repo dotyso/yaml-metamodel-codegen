@@ -1,0 +1,17 @@
+@args DropDownList dropDownList
+@import com.thsoft.metamodel.ui.*
+@import com.thsoft.metamodel.ui.controls.*
+@import org.apache.commons.lang3.StringUtils
+@raw(){
+@if (StringUtils.isNotBlank(dropDownList.getLabel())) { 
+<label>@dropDownList.getLabel()</label> 
+}
+<select @dropDownList.renderAttributes()>
+<option>请选择</option>
+@if (StringUtils.isNotBlank(dropDownList.getItemSource())) {
+<option v-for="item in @dropDownList.getItemSource()" v-bind:value="item.@dropDownList.getItemValueField()">
+{{ item.@dropDownList.getItemTextField() }}
+</option>
+}
+</select>
+}

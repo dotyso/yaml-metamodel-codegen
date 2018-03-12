@@ -1,0 +1,10 @@
+@args Model model
+@import com.thsoft.metamodel.domain.*
+
+public class @model.getName() {
+
+@for (Property property : model.getProperties()) {
+	private @property.getType() @property.getName();
+}
+
+}

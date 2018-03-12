@@ -1,0 +1,10 @@
+@args Panel panel
+@import com.thsoft.metamodel.ui.*
+@import com.thsoft.metamodel.ui.controls.*
+@raw() {
+<div>
+<h1>@panel.getGroupText()</h1>
+	@panel.renderChildControls()
+</div>
+}
+

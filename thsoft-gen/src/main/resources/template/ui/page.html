@@ -1,0 +1,21 @@
+@args Page page, ClientScript clientScript
+@import com.thsoft.metamodel.ui.*
+@import com.thsoft.metamodel.ui.controls.*
+
+@raw() {
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<title>T5智能制造协同平台</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	@clientScript.renderInclude()
+</head>
+<body>
+<div id="container" class="c_container">
+@page.renderChildControls()
+</div>
+</body>
+</html>
+}

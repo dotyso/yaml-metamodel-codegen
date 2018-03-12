@@ -1,0 +1,12 @@
+@args Feature feature, Model model
+@import com.thsoft.metamodel.domain.*
+@import com.thsoft.metamodel.domain.feature.*
+
+package @model.getPackage().repository;
+
+import @model.getPackage().model.@model.getName();
+
+@@Repository
+public class @model.getName()RepositoryImpl extends BaseRepository<@model.getName(), String> implements @model.getName()Repository {
+
+}

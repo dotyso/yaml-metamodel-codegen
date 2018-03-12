@@ -1,0 +1,7 @@
+@args CheckBox checkBox
+@import com.thsoft.metamodel.ui.*
+@import com.thsoft.metamodel.ui.controls.*
+@raw(){
+<label>@checkBox.getLabel()</label>
+<input type="checkbox" @checkBox.renderAttributes() />
+}

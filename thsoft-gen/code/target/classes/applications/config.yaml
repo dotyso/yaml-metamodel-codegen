@@ -1,0 +1,8 @@
+!com.thsoft.metamodel.application.ContextConfig
+    yamlBeanPackages: 
+      - com.thsoft.metamodel.domain
+      - com.thsoft.metamodel.domain.feature
+      - com.thsoft.metamodel.ui
+      - com.thsoft.metamodel.ui.controls
+      - com.thsoft.metamodel.ui.action
+

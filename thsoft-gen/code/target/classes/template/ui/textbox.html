@@ -1,0 +1,10 @@
+@args TextBox textBox
+@import com.thsoft.metamodel.ui.*
+@import com.thsoft.metamodel.ui.controls.*
+@import org.apache.commons.lang3.StringUtils
+@raw(){
+@if (StringUtils.isNotBlank(textBox.getLabel())) { 
+<label>@textBox.getLabel()</label> 
+}
+<input type="text" class="easyui-validatebox" @textBox.renderAttributes() />
+}

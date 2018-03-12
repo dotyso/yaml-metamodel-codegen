@@ -1,0 +1,18 @@
+!com.thsoft.metamodel.ui.Page
+    name: SchedulingPriority
+    title: 排程优先级
+    controls:
+        - !com.thsoft.metamodel.ui.controls.Panel
+          name: panel
+          text: 设置
+          dataContext: SchedulingPriority
+          controls:
+            - !com.thsoft.metamodel.ui.controls.TextBox
+              name: priorityName
+              validators: { required: true, regex: "[a-z0-9]*" }
+            - !com.thsoft.metamodel.ui.controls.TextBox
+              name: priorityName
+              validators: 
+                - !com.thsoft.metamodel.ui.validator.RequiredValidator {}
+                - !com.thsoft.metamodel.ui.validator.RegexValidator { regex: "[a-z0-9]*" }
+                

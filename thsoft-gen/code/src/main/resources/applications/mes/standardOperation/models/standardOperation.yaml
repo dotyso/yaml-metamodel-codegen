@@ -1,0 +1,11 @@
+!Model
+    name: StandardOperation
+    properties:
+        - { name: standardOperationCode, type: String, label: 标准工序编码 }
+        - { name: standardOperationName, type: int, label: 标准工序名称 }
+    features:
+        - !CurdFeature {}
+        
+        
+
+        

@@ -1,0 +1,32 @@
+!MesFormPage
+    name: Operation
+    title: 标准工序
+    dataContext: standardOperation
+    controls:
+        - !Tab
+          text: 详细信息
+          controls:
+              - !DetailForm
+                onSubmit: { refId: addAction }
+                controls:
+                    - !Panel
+                      groupText: 标准工序基本信息
+                      controls:
+                        - !TextBox  { label: 标准工序编码, name: standardOperationCode, validators: { required: true } }
+                        - !TextBox  { label: 标准工序名称, name: standardOperationName, validators: { required: true } }
+                        - !DropDownList  { label: 工序类别, name: standardOpetationClassID, validators: { required: true }, 
+                          ItemSource: classData, ItemValueField: standardOpetationClassID, ItemTextField: standardOpetationClassName }
+                    - !Panel
+                      groupText: 工序委外信息
+                      controls:
+                        - !CheckBox { label: 是否委外工序, name: isSubcontract, onClick: { action: !ToggleAction { args: outletSource }} }
+                        - !TextBox { label: 供应商编码, name: txtOutletNo, visibleBinding: { source: outletSource } }
+        - !Tab
+          text: 列表
+    dataSources: 
+        #- { name: standardOperation, method: /thsoft-website/mes/standardOperation/list }
+        - { name: classData, method: /thsoft-website/mes/standardOperationClass/list }
+    actions:
+        - { id: addAction, method: /thsoft-website/mes/standardOperation/add }
+        
+        

@@ -1,0 +1,6 @@
+!com.thsoft.metamodel.application.Module
+    title: 标准工序
+    name: StandardOperation
+    packageName: base.standardoperation
+    
+

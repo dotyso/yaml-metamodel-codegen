@@ -1,0 +1,10 @@
+!com.thsoft.metamodel.domain.Model
+    name: SchedulingPriority
+    properties:
+        - { name: Name, type: String }
+        - { name: Age, type: int }
+    features:
+        - !com.thsoft.metamodel.domain.feature.CurdFeature {}
+        
+
+        

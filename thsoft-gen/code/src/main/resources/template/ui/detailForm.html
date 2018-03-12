@@ -1,0 +1,10 @@
+@args DetailForm detailForm
+@import com.thsoft.metamodel.ui.*
+@import com.thsoft.metamodel.ui.controls.*
+@raw() {
+<div id="vueData">
+<form id="formInsert" class="ui form easyui-form" method="post" data-options="novalidate:true" style="max-width:1200px;padding: 16px" >
+	@detailForm.renderChildControls()
+</form>
+</div>
+}

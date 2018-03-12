@@ -1,0 +1,15 @@
+!MesFormPage
+    name: schedulingPriority
+    generateMode: Add, Update, Detail, Disable
+    title: 排程优先级
+    dataContext: schedulingPriority
+    controls:
+        - !DataForm
+          name: dataForm
+          items:
+           -  {name: priorityCode, type: TextBox, text: 内容 }
+           -  {name: priorityName, type: TextBox, dataBinding: {path: priorityName} }
+
+
+                      
+

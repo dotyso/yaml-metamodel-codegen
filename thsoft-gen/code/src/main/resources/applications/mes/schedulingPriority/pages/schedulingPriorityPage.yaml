@@ -1,0 +1,14 @@
+!MesFormPage
+    name: schedulingPriority
+    generateMode: Add, Update, Detail
+    title: 排程优先级
+    dataContext: schedulingPriority
+    controls:
+        - !DetailForm
+          name: detailForm
+          autoMode: true
+
+
+
+                      
+

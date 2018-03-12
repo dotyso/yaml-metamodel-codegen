@@ -1,0 +1,111 @@
+@args Page page, ClientScript clientScript
+@import com.thsoft.metamodel.ui.*
+@import com.thsoft.metamodel.ui.controls.*
+@import com.thsoft.metamodel.ui.script.*
+@raw() {
+<!DOCTYPE html>
+<html>
+<head lang="en" id="head">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href='../resource/mes/framework/easyui/themes/t5mes_default/easyui.css'>
+    <link rel="stylesheet" type="text/css" href='../resource/mes/framework/easyui/themes/icon.css'>
+    <link rel="stylesheet" type="text/css" href='../resource/mes/framework/semantic/semantic.min.css'>
+    <link rel="stylesheet" type="text/css" href='../resource/mes/framework/font-awesome/css/font-awesome.min.css'>
+    <link rel="stylesheet" type="text/css" href='../resource/mes/css/common.css'>
+    <link rel="stylesheet" type="text/css" href='../resource/mes/component/menuSearchTemplate/menuSearchTpl.css'>
+    <link rel="stylesheet" type="text/css" href='../resource/mes/component/searchModalContainerComponent/newSearchContainerComponent.css'>
+    <!--新增样式  -->
+    <style>
+        .detail-tabs .tabs-header{
+            padding-left: 21px;
+        }
+        .ui.selection.dropdown{
+            padding: 0.35rem 1rem;
+        }
+        #dgProcess caption,#dgProcess th,#dgProcess td{
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+        #dgProcessGroup caption,#dgProcessGroup th,#dgProcessGroup td{
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+        #dgProcess th,#dgProcess td,#dgProcessGroup th,#dgProcessGroup td{
+            width: 7%;
+            height: 30px;
+        }
+        #dgProcess,#dgProcessGroup{
+            margin-bottom: 30px;
+        }
+        .resourceBtn{
+            margin-left: 30px;
+            padding: 0 30px;
+            border-radius: 5px;
+            background: #fff;
+        }
+        #btnInsertContainer .ui.action.input{
+            border: 0;
+        }
+        #btnInsertContainer .ui.action.input button{
+            background: #00B5AD;
+        }
+        #dgProcess .proSet,#dgProcessGroup .proSet{
+            border: 0;
+            outline: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="layoutContainer" class="easyui-layout" style="width: 100%;height:100%">
+    <div data-options="region:'north'" class="layoutNorth"><!--hideSerialChoose()-->
+        <div id="toolsBar" class="toolsBar">
+            <div class="ui icon buttons func">
+                <!--按钮  -->
+                <button id="btnSave" title="保存"></button>
+                <button id="btnCancel" title="清除表单"></button>
+                <button id="btnAdd" title="添加"></button>
+                <button id="btnDel" title="删除"></button>
+                <button id="btnCopy" title="复制当前内容"></button>
+                <button id="btnSearch" title="查找可编辑工序类别" onClick="showMenuModel()"></button>
+            </div>
+            <table id="menuSwitcher" class="switcherBorder" border="0" cellpadding="0" cellspacing="0"></table>
+            <div class="goToList">
+                <button class="tiny ui right labeled icon button" onclick="GotoBatchNumberList()">
+                    <i class="large right share icon"></i> 查看全部数据&nbsp;&nbsp;
+                </button>
+            </div>
+        </div>
+    </div>
+    <div data-options="region:'west',split:true,hideCollapsedContent:false,collapsed:true"
+         title="<i class='filter icon'></i><b>标准工序维护</b>"
+         style="width:300px;overflow:auto;">
+        <ul id="selectedProcessNumberTree" class="easyui-tree" data-options="animate:true,fit:true" style="width:100%;height:100%;"></ul>
+    </div>
+    <div data-options="region:'center'" style="overflow: hidden" title="<i class='database icon'></i><b>工序维护</b>">
+        	<div class="easyui-tabs" id="processNumberTabs" style="width:100%;height:100%">
+				@page.renderChildControls()
+			</div>
+    </div>
+</div>
+</html>
+<script type="text/javascript" src='../resource/mes/framework/jquery/jquery-1.12.3.min.js'></script>
+<script type="text/javascript" src='../resource/mes/framework/semantic/semantic.min.js'></script>
+<script type="text/javascript" src='../resource/mes/framework/easyui/jquery.easyui.min.js'></script>
+<script type="text/javascript" src='../resource/mes/framework/easyui/easyui-lang-zh_CN.js'></script>
+<script type="text/javascript" src='../resource/mes/framework/easyui/easyui.validate.addmethod.js'></script>
+<script type="text/javascript" src='../resource/mes/framework/vue/vue.js'></script>
+<script type="text/javascript" src='../resource/mes/js/common.js'></script>
+<script type="text/javascript" src='../resource/mes/js/toolbarConfig.js'></script>
+<script type="text/javascript" src='../resource/mes/component/menuSearchTemplate/menuSearchTpl.js'></script>
+<script type="text/javascript" src='../resource/mes/component/selectedObjectList/selectedObjectList.js'></script>
+<script type="text/javascript" src='../resource/mes/component/switcher/switcher.js'></script>
+<script type="text/javascript" src='../resource/mes/component/searchModalContainerComponent/newSearchContainerComponent.js'></script>
+<script>
+	@clientScript.renderDeclareBlock()
+	@clientScript.renderStartupBlock()
+</script>
+}

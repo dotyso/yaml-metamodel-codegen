@@ -1,0 +1,18 @@
+@args MesPanel mesPanel
+@import com.thsoft.metamodel.ui.*
+@import com.thsoft.metamodel.ui.controls.*
+@raw() {
+
+<div class="ui segment" style="background:#fff;">
+<h3>@mesPanel.getGroupText()</h3>
+<hr/>
+<div class="ui two column grid">
+@for (Control control : mesPanel.getControls()) {
+    <div class="column">
+	@control.render()
+	</div>
+}
+</div>
+</div>
+}
+

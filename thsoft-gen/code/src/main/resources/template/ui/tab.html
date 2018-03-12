@@ -1,0 +1,8 @@
+@args Tab tab
+@import com.thsoft.metamodel.ui.*
+@import com.thsoft.metamodel.ui.controls.*
+@raw() {
+<div title="@tab.getText()" style="padding:15px">
+	@tab.renderChildControls()
+</div>
+}

@@ -1,0 +1,6 @@
+!com.thsoft.metamodel.application.Module
+    id: standardOperation
+    name: 制造执行系统
+    codeName: standardOperation
+    
+

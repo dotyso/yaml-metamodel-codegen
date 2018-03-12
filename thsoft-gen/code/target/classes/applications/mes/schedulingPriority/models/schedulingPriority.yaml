@@ -1,0 +1,11 @@
+!Model
+    name: SchedulingPriority
+    properties:
+        - { name: priorityCode, type: String, label: 优先级编码 }
+        - { name: priorityName, type: String, label: 优先级名称 }
+    features:
+        - !CurdFeature {}
+        
+        
+
+        

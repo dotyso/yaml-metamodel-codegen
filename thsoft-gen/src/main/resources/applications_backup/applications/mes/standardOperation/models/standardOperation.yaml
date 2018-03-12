@@ -1,0 +1,11 @@
+!Model
+    name: StandardOperation
+    properties:
+        - { name: standardOperationCode, type: String }
+        - { name: standardOperationName, type: int }
+    features:
+        - !CurdFeature {}
+        
+        
+
+        

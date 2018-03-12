@@ -1,0 +1,13 @@
+@args Feature feature, Model model
+@import com.thsoft.metamodel.domain.*
+@import com.thsoft.metamodel.domain.feature.*
+
+public class @model.getName()ServiceImpl implements @model.getName()Service {
+	@@Autowired
+	private @model.getName()Repository @model.getLowerName()Repository;
+
+	@@Override
+	public List<MomGroupView> findAll(Query query) {
+		return @model.getLowerName()Repository.findAll(query);
+	}
+}

@@ -1,0 +1,13 @@
+!com.thsoft.metamodel.ui.Page
+    name: SchedulingPriority
+    title: 排程优先级
+    controls:
+        - !com.thsoft.metamodel.ui.controls.DataForm
+          name: abc
+          dataContext: SchedulingPriority
+          items:
+           -  {name: priorityCode, type: TextBox, text: 内容 }
+           -  {name: priorityName, type: TextBox, dataBinding: {path: priorityName} }
+
+                      
+

@@ -1,0 +1,5 @@
+!com.thsoft.metamodel.application.Application
+    id: mes
+    name: 制造执行系统
+    codeName: mes
+

@@ -1,0 +1,21 @@
+!MesInsertPage
+    name: Operation
+    title: 标准工序
+    dataContext: StandardOperation
+    controls:
+        - !MesDetailForm
+          controls:
+              - !MesPanel
+                groupText: 标准工序基本信息
+                controls:
+                  - !TextBox  { label: 标准工序编码, name: standardOperationCode, validators: { required: true } }
+                  - !TextBox  { label: 标准工序名称, name: standardOperationName, validators: { required: true } }
+                  - !DropDownList  { label: 工序类别, name: standardOpetationClassID, 
+                    ItemSource: standardOpetationClass, ItemValueField: standardOpetationClassName, ItemTextField: standardOpetationClassID, 
+                    validators: { required: true } }
+              - !MesPanel
+                groupText: 工序委外信息
+                controls:
+                  - !CheckBox { label: 是否委外工序, name: isSubcontract }
+    dataSources: 
+        - { name: standardOpetationClass, method: /mes/standardOperationClass/list }
